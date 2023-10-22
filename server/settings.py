@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-sa1r1tu#!*6!n(oga*=j3*bl-jjusxl1*ipd&=&)r0eq9jyirx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['emailspamdetector.onrender.com','localhost','127.0.0.1']
 
 
 # Application definition
