@@ -8,6 +8,9 @@ import os
 model = pickle.load(open(os.path.join(BASE_DIR,'model.pkl'),'rb'))
 
 def index(request):
+    return render(request,'index.html')
+
+def qn2(request):
     if request.method=="POST":
         text = request.POST.get('message')
         message = [text]
@@ -17,8 +20,7 @@ def index(request):
             spam = "This is a spam message"
         else:
             spam = "This is not a spam message"
-        return render(request,'index.html',{'prediction_text':spam})
-    return render(request,'index.html')
-
+        return render(request,'qn2.html',{'prediction_text':spam})
+    return render(request,'qn2.html')
 
     

@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,15 +8,8 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="flex justify-center items-center flex-col w-full h-full lg:px-20 pb-20">
-    <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-center my-20 ">Email Spam Detection</h1>
-    <form class="border-2 w-full  h-full   flex flex-col p-5 border-2 border-black" action="/" method="post"> {% csrf_token %}
-      {% if prediction_text %}
-      <div class="text-center font-bold text-2xl my-10">{{prediction_text}}</div>
-      {% endif %}
-      <input class="border-2 border-black mb-5 w-full p-2 overflow-scroll"  name="message" type="text" >
-      <button type="submit" class="border-2 border-black p-2 rounded-md bg-black text-white text-xl hover:bg-opacity-90">Submit</button>
-    </form>
-  </body>
-  <script></script>
+  <body class="my-20 text-center">
+    <div class="font-bold my-5">For qn1 Visit This Link <a
+      target="_blank" href="https://colab.research.google.com/drive/1RHCT8Wc4Gt25U0nWi88SLl4L9k1m7TXC" class="text-blue-500 underline">Click Me</a></div>
+      <div class="font-bold my-5">For qn2 Visit This Link <a target="_blank" class="text-blue-500 underline" href="{% url 'api:qn2' %}">Click Me</a></div>
 </html>
